@@ -1,0 +1,52 @@
+/* {
+  "snippets.ultisnips.directories" :
+  [
+	  "UltiSnips",
+	  "~/.config/nvim/utils/snips"
+  ],
+} */
+
+{
+  "suggest.enablePreview": true,
+  "suggest.snippetIndicator": "  ",
+  "suggest.minTriggerInputLength": 3,
+  "suggest.removeDuplicateItems": true,
+  "suggest.completionItemKindLabels": {
+    "keyword": "  ",
+		"variable": " [] ",
+		"value": "  ",
+		"operator": "  ",
+		"constructor": "  ",
+		"function": "  ",
+		"reference": "  ",
+		"constant": "  ",
+		"method": "  ",
+		"struct": "  ",
+		"class": "  ",
+		"interface": " ﰮ ",
+		"text": "  ",
+		"enum": "  ",
+		"enumMember": "  ",
+		"module": "  ",
+		"color": "  ",
+		"property": "  ",
+		"field": "  ",
+		"unit": "  ",
+		"event": "  ",
+		"file": "  ",
+		"folder": " 📁 ",
+		"snippet": "  ",
+		"typeParameter": " <> ",
+		"default": "  "
+  },
+  "diagnostic.virtualText" :true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextPrefix": "  ",
+  "diagnostic.errorSign" : "",
+  "diagnostic.warningSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.infoSign": "",
+	"rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false
+}
