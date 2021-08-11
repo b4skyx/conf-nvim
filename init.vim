@@ -24,8 +24,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'b4skyx/serenade'
 Plug 'kyazdani42/nvim-web-devicons'
 
-Plug 'thepogsupreme/mountain.nvim'
-
 Plug 'nvim-lua/plenary.nvim'
 
 Plug 'junegunn/fzf.vim', {'on': '#VimEnter'}
