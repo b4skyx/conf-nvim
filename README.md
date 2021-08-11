@@ -19,7 +19,6 @@ Configs for both lsp and coc-nvim are present just incase.
 The folder heirarchy is as follows
 
 ```
-├── autoload
 ├── init.vim
 ├── lua
 │   ├── colorscheme.lua
@@ -31,7 +30,7 @@ The folder heirarchy is as follows
 └── syntax
 ```
 
-`autoload` contains the vim autocmds as there is no proper method to define autocmds in lua yet.
+`plugin` contains the vim autocmds as there is no proper method to define autocmds in lua yet.
 <br>
 The init.vim is initially loaded which loads the lua/init.lua at the end.
 
