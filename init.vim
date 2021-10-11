@@ -45,14 +45,15 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'vimwiki/vimwiki'
 
 " Comment coc and uncomment the ones below if you'd like to use nvim lsp
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall', 'on': '#CursorHold'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall', 'on': '#VimEnter'}
 
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
 " Plug 'onsails/lspkind-nvim'
 " Plug 'windwp/nvim-autopairs', {'on': '#CursorHold'}
 
-Plug 'sheerun/vim-polyglot', {'on': []}
+Plug 'sheerun/vim-polyglot'
+Plug 'honza/vim-snippets'
 Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
@@ -70,4 +71,3 @@ let g:vimwiki_diary_caption_level = -1
 lua << EOF
 require("init")
 EOF
-let g:seoul256_background = 234

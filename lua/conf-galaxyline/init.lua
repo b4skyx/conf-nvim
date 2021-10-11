@@ -46,7 +46,7 @@ local bufficon = {
     provider = function()
       -- auto change color according the vim mode
     local mode_text = {
-		n      = "  NORMAL ",
+    n      = "  NORMAL ",
     i      = "  INSERT ",
     v      = "  VISUAL ",
     [''] = "  VISUAL ",
@@ -266,3 +266,6 @@ gls.right[9] = linepercent
 -- Inactive Statusline
 gls.short_line_left[1] = filename
 gls.short_line_left[2] = space
+
+-- Load galaxyline whenever nvim loads
+gl.load_galaxyline()

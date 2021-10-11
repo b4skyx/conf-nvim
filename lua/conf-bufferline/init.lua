@@ -58,4 +58,4 @@ keymap=vim.api.nvim_set_keymap
 keymap('', '<Tab>',  ':BufferLineCycleNext<CR>', opts)
 keymap('', '<S-Tab>',  ':BufferLineCyclePrev<CR>', opts)
 keymap('', '<C-c>',  ':bd<CR>', opts)
-keymap('', '<C-t>',  ':tabnew<CR>', opts)
+-- keymap('', '<C-t>',  ':tabnew<CR>', opts)

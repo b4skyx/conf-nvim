@@ -19,7 +19,7 @@ Configs for both lsp and coc-nvim are present just incase.
 The folder heirarchy is as follows
 
 ```
-├── init.vim
+├── int.vim
 ├── lua
 │   ├── colorscheme.lua
 │   ├── keymappings.lua
