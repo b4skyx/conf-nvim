@@ -18,6 +18,7 @@ async =
 	require('conf-nvimtree')
 	require('conf-coc')
 	require('conf-telescope')
+	require("conf-indentline")
 
 	-- Setup Plugin Defaults
 	require('kommentary.config').use_extended_mappings()

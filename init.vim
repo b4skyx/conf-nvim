@@ -21,8 +21,11 @@ endif
 " Vim-Plug Plugins
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'Shatur/neovim-ayu'
 Plug 'b4skyx/serenade'
 Plug 'kyazdani42/nvim-web-devicons'
+
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 
