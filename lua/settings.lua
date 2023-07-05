@@ -20,6 +20,7 @@ vim.o.linebreak = true
 vim.o.shortmess = (vim.o.shortmess or "") .. "c"
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.list = true
 
 -- Keep undo history even after file quit
 cmd([[
