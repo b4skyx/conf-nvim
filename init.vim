@@ -9,7 +9,7 @@ let mapleader =" "
 let maplocalleader = ";"
 
 " VimWiki Config
-let g:vimwiki_list = [{'path': '/Users/T1181AY/Workspace/Notes/VimWiki',
+let g:vimwiki_list = [{'path': '~/Workspace/VimWiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_listsyms = '✗○◐●✓'

@@ -1,21 +1,24 @@
 return {
-	-- {
-	-- 	"b4skyx/serenade",
-	-- 	config = function()
-	-- 		vim.g.serenade_enable_italic = 1
-	-- 		vim.g.serenade_better_performance = 1
-	-- 		vim.g.serenade_transparent_background = 0
-	-- 		vim.g.serenade_diagnostic_text_highlight = 1
-	-- 		vim.g.serenade_diagnostic_line_highlight = 0
-	-- 		vim.cmd("colorscheme serenade")
-	-- 	end,
-	-- },
 	{
-		"shaunsingh/nord.nvim",
+		"sainnhe/gruvbox-material",
 		config = function()
-			vim.cmd("colorscheme nord")
+			vim.cmd("colorscheme gruvbox-material")
 		end,
 	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			flavour = "frappe", -- latte, frappe, macchiato, mocha
+	-- 			background = { -- :h background
+	-- 				light = "latte",
+	-- 				dark = "frappe",
+	-- 			},
+	-- 			transparent_background = true,
+	-- 		})
+	-- 	end,
+	-- },
 	{
 		"kdheepak/tabline.nvim",
 		config = function()
@@ -84,7 +87,7 @@ return {
 	},
 
 	-- LSP
-    {'neovim/nvim-lspconfig'},
+	{ 'neovim/nvim-lspconfig' },
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	{
@@ -119,7 +122,7 @@ return {
 		config = function()
 			require("configs.telescope")
 		end,
-		dependencies = {"nvim-telescope/telescope-project.nvim"},
+		dependencies = { "nvim-telescope/telescope-project.nvim" },
 	},
 	{
 		'simrat39/symbols-outline.nvim',
@@ -130,9 +133,21 @@ return {
 	{
 		'lukas-reineke/indent-blankline.nvim',
 		config = function()
-			require("indent_blankline").setup {
-				show_end_of_line = true,
-			}
+			require("ibl").setup()
 		end,
-	}
+	},
+	{
+		'mbbill/undotree'
+	},
+	-- {
+	-- 	'kevinhwang91/nvim-ufo',
+	-- 	dependencies = {'kevinhwang91/promise-async'},
+	-- 	config = function()
+	-- 		require('ufo').setup({
+	-- 			provider_selector = function(bufnr, filetype, buftype)
+	-- 				return { 'treesitter', 'indent' }
+	-- 			end
+	-- 		})
+	-- 	end,
+	-- }
 }

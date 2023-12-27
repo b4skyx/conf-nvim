@@ -13,6 +13,7 @@ vim.o.timeoutlen = 500
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.foldmethod = "indent"
+vim.o.foldcolumn = '1'
 vim.o.conceallevel = 2
 vim.o.autoindent = true
 vim.o.wrap = true

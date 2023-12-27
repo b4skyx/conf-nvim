@@ -22,3 +22,4 @@ augroup END
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+au VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")
