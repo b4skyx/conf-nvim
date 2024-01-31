@@ -125,4 +125,5 @@ return {
 	{
 		'mbbill/undotree'
 	},
+	"LunarVim/bigfile.nvim",
 }
