@@ -125,5 +125,4 @@ return {
 	{
 		'mbbill/undotree'
 	},
-	"petobens/poet-v"
 }
