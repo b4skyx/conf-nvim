@@ -71,25 +71,20 @@ lspconfig.lua_ls.setup({
 	},
 })
 
-lspconfig.solargraph.setup({
-	capabilities = capabilities,
-})
-
-lspconfig.ruff_lsp.setup({
-	capabilities = capabilities,
-})
+local servers = {
+	-- many other servers
+	'solargraph',
+	'pyright',
+	'rust_analyzer',
+	'clangd'
+}
+for _, server in ipairs(servers) do
+	lspconfig[server].setup({ capabilities = capabilities })
+end
 
 lspconfig.lemminx.setup({
 	capabilities = capabilities,
 	filetypes = { "arxml", "xml" },
-})
-
-lspconfig.rust_analyzer.setup({
-	capabilities = capabilities,
-})
-
-lspconfig.clangd.setup({
-	capabilities = capabilities,
 })
 
 vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
