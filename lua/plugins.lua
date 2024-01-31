@@ -5,20 +5,6 @@ return {
 			vim.cmd("colorscheme gruvbox-material")
 		end,
 	},
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	config = function()
-	-- 		require("catppuccin").setup({
-	-- 			flavour = "frappe", -- latte, frappe, macchiato, mocha
-	-- 			background = { -- :h background
-	-- 				light = "latte",
-	-- 				dark = "frappe",
-	-- 			},
-	-- 			transparent_background = true,
-	-- 		})
-	-- 	end,
-	-- },
 	{
 		"kdheepak/tabline.nvim",
 		config = function()
@@ -139,15 +125,5 @@ return {
 	{
 		'mbbill/undotree'
 	},
-	-- {
-	-- 	'kevinhwang91/nvim-ufo',
-	-- 	dependencies = {'kevinhwang91/promise-async'},
-	-- 	config = function()
-	-- 		require('ufo').setup({
-	-- 			provider_selector = function(bufnr, filetype, buftype)
-	-- 				return { 'treesitter', 'indent' }
-	-- 			end
-	-- 		})
-	-- 	end,
-	-- }
+	"petobens/poet-v"
 }
