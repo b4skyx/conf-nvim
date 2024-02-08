@@ -1,19 +1,18 @@
 return {
-	{
-		"sainnhe/gruvbox-material",
-		config = function()
-			vim.cmd("colorscheme gruvbox-material")
-		end,
-	},
 	-- {
-	-- 	"gbprod/nord.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
+	-- 	"sainnhe/gruvbox-material",
 	-- 	config = function()
-	-- 		require("nord").setup({})
-	-- 		vim.cmd.colorscheme("nord")
+	-- 		vim.cmd("colorscheme gruvbox-material")
 	-- 	end,
 	-- },
+	{
+		"shaunsingh/nord.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("nord")
+		end,
+	},
 	{
 		"kdheepak/tabline.nvim",
 		config = function()
@@ -69,6 +68,15 @@ return {
 	"rafamadriz/friendly-snippets",
 	"lvimuser/lsp-inlayhints.nvim",
 	{
+		"danymat/neogen",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require('neogen').setup({ snippet_engine = "luasnip" })
+		end,
+		-- Uncomment next line if you want to follow only stable versions
+		-- version = "*"
+	},
+	{
 		"L3MON4D3/LuaSnip",
 		config = function()
 			require("configs.completions")
@@ -86,6 +94,14 @@ return {
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	{
+		"jay-babu/mason-null-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"williamboman/mason.nvim",
+			"nvimtools/none-ls.nvim",
+		}
+	},
+	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("configs.lspconfig")
@@ -95,7 +111,7 @@ return {
 	{
 		event = "LspAttach",
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
@@ -135,4 +151,5 @@ return {
 		'mbbill/undotree'
 	},
 	"LunarVim/bigfile.nvim",
+	"dstein64/vim-startuptime"
 }

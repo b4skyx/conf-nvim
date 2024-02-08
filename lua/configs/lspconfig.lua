@@ -2,6 +2,9 @@ require("mason").setup({
 	PATH = "prepend"
 }
 )
+require("mason-null-ls").setup({
+	handlers = {},
+})
 require("mason-lspconfig").setup()
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
