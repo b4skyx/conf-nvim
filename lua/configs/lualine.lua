@@ -26,7 +26,7 @@ require("lualine").setup({
 	options = {
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		theme = "nord",
+		theme = "gruvbox",
 		disabled_filetypes = {
 			{ "packer", "NvimTree" },
 			statusline = {},
@@ -36,7 +36,10 @@ require("lualine").setup({
 	sections = {
 		lualine_c = {
 			{ "filename" },
-			{ "lsp_progress" },
+			function()
+				-- invoke `progress` here.
+				return require("lsp-progress").progress()
+			end,
 		},
 	},
 })

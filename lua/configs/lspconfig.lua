@@ -77,7 +77,7 @@ lspconfig.lua_ls.setup({
 local servers = {
 	-- many other servers
 	'solargraph',
-	'pyright',
+	'pylsp',
 	'rust_analyzer',
 	'clangd'
 }

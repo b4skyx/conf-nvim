@@ -1,18 +1,18 @@
 return {
-	-- {
-	-- 	"sainnhe/gruvbox-material",
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme gruvbox-material")
-	-- 	end,
-	-- },
 	{
-		"shaunsingh/nord.nvim",
-		lazy = false,
-		priority = 1000,
+		"sainnhe/gruvbox-material",
 		config = function()
-			vim.cmd.colorscheme("nord")
+			vim.cmd("colorscheme gruvbox-material")
 		end,
 	},
+	-- {
+	-- 	"shaunsingh/nord.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("nord")
+	-- 	end,
+	-- },
 	{
 		"kdheepak/tabline.nvim",
 		config = function()
@@ -71,7 +71,7 @@ return {
 		"danymat/neogen",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 		config = function()
-			require('neogen').setup({ snippet_engine = "luasnip" })
+			require("neogen").setup({ snippet_engine = "luasnip" })
 		end,
 		-- Uncomment next line if you want to follow only stable versions
 		-- version = "*"
@@ -90,7 +90,7 @@ return {
 	},
 
 	-- LSP
-	{ 'neovim/nvim-lspconfig' },
+	{ "neovim/nvim-lspconfig" },
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	{
@@ -99,7 +99,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"nvimtools/none-ls.nvim",
-		}
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -136,20 +136,20 @@ return {
 		dependencies = { "nvim-telescope/telescope-project.nvim" },
 	},
 	{
-		'simrat39/symbols-outline.nvim',
+		"simrat39/symbols-outline.nvim",
 		config = function()
 			require("symbols-outline").setup()
 		end,
 	},
 	{
-		'lukas-reineke/indent-blankline.nvim',
+		"lukas-reineke/indent-blankline.nvim",
 		config = function()
 			require("ibl").setup()
 		end,
 	},
 	{
-		'mbbill/undotree'
+		"mbbill/undotree",
 	},
 	"LunarVim/bigfile.nvim",
-	"dstein64/vim-startuptime"
+	"dstein64/vim-startuptime",
 }

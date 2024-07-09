@@ -76,3 +76,8 @@ vim.g.loaded_syncolor = 0
 
 -- Completion Settings
 vim.opt.completeopt = {'menu', 'menuone' , 'noselect'}
+
+-- Inlay Hints
+if vim.lsp.inlay_hint then
+    vim.keymap.set('n', '<Leader>h', function() vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled(0)) end, { desc = "toggle inlay [h]ints" })
+end
