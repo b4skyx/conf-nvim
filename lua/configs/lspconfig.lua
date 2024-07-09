@@ -1,7 +1,6 @@
 require("mason").setup({
-	PATH = "prepend"
-}
-)
+	PATH = "prepend",
+})
 require("mason-null-ls").setup({
 	handlers = {},
 })
@@ -64,6 +63,9 @@ lspconfig.lua_ls.setup({
 			diagnostics = {
 				globals = { "vim" },
 			},
+			hint = {
+				enable = true,
+			},
 			workspace = {
 				library = {
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
@@ -76,10 +78,9 @@ lspconfig.lua_ls.setup({
 
 local servers = {
 	-- many other servers
-	'solargraph',
-	'pylsp',
-	'rust_analyzer',
-	'clangd'
+	"pyright",
+	"rust_analyzer",
+	"clangd",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({ capabilities = capabilities })
@@ -90,16 +91,21 @@ lspconfig.lemminx.setup({
 	filetypes = { "arxml", "xml" },
 })
 
-vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = "LspAttach_inlayhints",
-	callback = function(args)
-		if not (args.data and args.data.client_id) then
-			return
-		end
-
-		local bufnr = args.buf
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		require("lsp-inlayhints").on_attach(client, bufnr)
-	end,
-})
+if vim.lsp.inlay_hint then
+	vim.keymap.set("n", "<localleader>h", function()
+		vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+	end, { desc = "toggle inlay [h]ints" })
+end
+-- vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
+-- vim.api.nvim_create_autocmd("LspAttach", {
+-- 	group = "LspAttach_inlayhints",
+-- 	callback = function(args)
+-- 		if not (args.data and args.data.client_id) then
+-- 			return
+-- 		end
+--
+-- 		local bufnr = args.buf
+-- 		local client = vim.lsp.get_client_by_id(args.data.client_id)
+-- 		require("lsp-inlayhints").on_attach(client, bufnr)
+-- 	end,
+-- })

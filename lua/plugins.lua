@@ -1,24 +1,24 @@
 return {
-	{
-		"sainnhe/gruvbox-material",
-		config = function()
-			vim.cmd("colorscheme gruvbox-material")
-		end,
-	},
 	-- {
-	-- 	"shaunsingh/nord.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
+	-- 	"sainnhe/gruvbox-material",
 	-- 	config = function()
-	-- 		vim.cmd.colorscheme("nord")
+	-- 		vim.cmd("colorscheme gruvbox-material")
 	-- 	end,
 	-- },
+	{
+		"shaunsingh/nord.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("nord")
+		end,
+	},
 	{
 		"kdheepak/tabline.nvim",
 		config = function()
 			require("configs.lualine")
 		end,
-		dependencies = { "nvim-lualine/lualine.nvim" },
+		dependencies = { "nvim-lualine/lualine.nvim", "arkav/lualine-lsp-progress" },
 	},
 	{
 		"nvim-lualine/lualine.nvim",
@@ -150,6 +150,24 @@ return {
 	{
 		"mbbill/undotree",
 	},
-	"LunarVim/bigfile.nvim",
+	"pteroctopus/faster.nvim",
 	"dstein64/vim-startuptime",
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		branch = "canary",
+		dependencies = {
+			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+		},
+		config = function()
+			require("configs.copilot")
+		end,
+		-- See Commands section for default commands if you want to lazy load on them
+	},
+	"MysticalDevil/inlay-hints.nvim",
+    event = "LspAttach",
+    dependencies = { "neovim/nvim-lspconfig" },
+    config = function()
+        require("inlay-hints").setup()
+    end
 }
